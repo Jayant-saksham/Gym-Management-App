@@ -18,8 +18,8 @@ class AdminCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 170,
-      width: 170,
+      height: 160,
+      width: 160,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: backgroundColor,
