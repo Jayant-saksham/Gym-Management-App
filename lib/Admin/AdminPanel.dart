@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hexcolor/hexcolor.dart';
 import 'package:ugi/Admin/AdminWidgets/AdminCard.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:ugi/Theme/color.dart';
 import './AdminWidgets/Drawer.dart';
+
 GlobalKey<ScaffoldState> drawerKey = GlobalKey();
-
-
-String imageUrl =
-    'https://scontent.fdel5-1.fna.fbcdn.net/v/t1.0-9/57232195_1109540222572859_7210260039892729856_n.jpg?_nc_cat=111&ccb=2&_nc_sid=09cbfe&_nc_ohc=NdZ8RLlYqwAAX-893oo&_nc_ht=scontent.fdel5-1.fna&oh=6f110bd643ad35fa972a80bd6cab00b5&oe=60188DC5';
 
 class AdminPanel extends StatefulWidget {
   @override
@@ -33,12 +30,15 @@ class _AdminPanelState extends State<AdminPanel> {
       drawer: myDrawer(context),
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.menu, color: Colors.white),
+          icon: Icon(
+            Icons.menu,
+            color: Colors.white,
+          ),
           onPressed: () {
             drawerKey.currentState.openDrawer();
           },
         ),
-        backgroundColor: HexColor('#001133'),
+        backgroundColor: darkBlue,
         elevation: 0,
         centerTitle: true,
         title: Text(
@@ -46,7 +46,7 @@ class _AdminPanelState extends State<AdminPanel> {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      backgroundColor: HexColor('#001133'),
+      backgroundColor: darkBlue,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
@@ -54,9 +54,7 @@ class _AdminPanelState extends State<AdminPanel> {
           children: [
             CircleAvatar(
               radius: 50,
-              backgroundImage: AssetImage(
-                'assets/images/ugi.jpg'
-              )
+              backgroundImage: AssetImage('assets/images/ugi.jpg'),
             ),
             SizedBox(
               height: 20,
@@ -77,7 +75,7 @@ class _AdminPanelState extends State<AdminPanel> {
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,
-                color: Colors.green[600],
+                color: green,
               ),
             ),
             SizedBox(
@@ -94,7 +92,7 @@ class _AdminPanelState extends State<AdminPanel> {
                   backgroundColor: Colors.amber,
                   title: "Active",
                   content: "56",
-                  titleColor: Colors.indigo,
+                  titleColor: indigo,
                   contentColor: Colors.white,
                 ),
                 AdminCard(
@@ -102,10 +100,10 @@ class _AdminPanelState extends State<AdminPanel> {
                     "assets/images/user.png",
                     width: 30,
                   ),
-                  backgroundColor: Colors.indigo,
+                  backgroundColor: indigo,
                   title: "Inactive",
                   content: "30",
-                  titleColor: Colors.amber,
+                  titleColor: amber,
                   contentColor: Colors.white,
                 ),
               ],
@@ -132,10 +130,10 @@ class _AdminPanelState extends State<AdminPanel> {
                     "assets/images/user.png",
                     width: 30,
                   ),
-                  backgroundColor: Colors.orange[800],
+                  backgroundColor: orange,
                   title: "Unpaid",
                   content: "30",
-                  titleColor: Colors.indigo,
+                  titleColor: indigo,
                   contentColor: Colors.white,
                 ),
               ],
