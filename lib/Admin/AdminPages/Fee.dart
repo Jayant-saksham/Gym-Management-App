@@ -31,7 +31,10 @@ class _FeeState extends State<Fee> {
         children: [
           ListTile(
             leading: CircleAvatar(
-              child: Text("T"),
+              backgroundColor: Colors.transparent,
+              backgroundImage: AssetImage(
+                "assets/images/user.png",
+              ),
             ),
             title: Text(
               "Jayant Saksham",
@@ -50,7 +53,10 @@ class _FeeState extends State<Fee> {
           ),
           ListTile(
             leading: CircleAvatar(
-              child: Text("T"),
+              backgroundColor: Colors.transparent,
+              backgroundImage: AssetImage(
+                "assets/images/user.png",
+              ),
             ),
             title: Text(
               "Jayant Saksham",

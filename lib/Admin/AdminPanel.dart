@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:ugi/Theme/color.dart';
 import './AdminWidgets/Drawer.dart';
+import 'package:ugi/constants/assetImages.dart';
 
 GlobalKey<ScaffoldState> drawerKey = GlobalKey();
 
@@ -53,8 +54,8 @@ class _AdminPanelState extends State<AdminPanel> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('assets/images/ugi.jpg'),
+              radius: 56,
+              backgroundImage: AssetImage(hackerGif),
             ),
             SizedBox(
               height: 20,
@@ -71,7 +72,7 @@ class _AdminPanelState extends State<AdminPanel> {
               height: 22,
             ),
             Text(
-              "₹ " + "66000",
+              "₹ " + "6000",
               style: TextStyle(
                 fontSize: 32,
                 fontWeight: FontWeight.bold,

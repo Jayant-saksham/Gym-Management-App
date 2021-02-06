@@ -21,19 +21,19 @@ class _AddMemberState extends State<AddMember> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: darkBlue,
         elevation: 0,
         centerTitle: true,
-        title: Text("Add a Member", style: TextStyle(color: Colors.black)),
+        title: Text("Add a Member"),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios,
-            color: Colors.black,
+            color: Colors.white,
           ),
           onPressed: () => Navigator.pop(context),
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: darkBlue,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -112,11 +112,14 @@ class _AddMemberState extends State<AddMember> {
       },
       keyboardType: TextInputType.name,
       decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderSide: BorderSide(width: 6.0),
-          ),
-          hintText: "Enter name",
-          prefixIcon: Icon(Icons.person)),
+        fillColor: Colors.white,
+        focusColor: Colors.white,
+        border: OutlineInputBorder(
+          borderSide: BorderSide(width: 6.0),
+        ),
+        hintText: "Enter name",
+        prefixIcon: Icon(Icons.person),
+      ),
     );
   }
 
